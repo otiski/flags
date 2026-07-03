@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="code" type="text" placeholder="Voeg land code in" />
+    <button id="submit">submit</button>
+    <br />
+    <img id="img" src="https://flagsapi.com/HK/flat/64.png" alt="countryflag" />
+
+    <script>
+      const code = document.getElementById('code')
+      const img = document.getElementById('img')
+
+      document.getElementById('submit').onclick = () => {
+        const country = code.value.trim().toUpperCase()
+
+        if (country) {
+          img.src = `https://flagsapi.com/${country}/flat/64.png`
+        }
+      }
+    </script>
+  </body>
+</html>
